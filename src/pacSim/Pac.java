@@ -9,7 +9,7 @@ public class Pac {
 	private int posicionX;
 	private int posicionY;
 
-	public Pac(int xEntrada, int yEntrada) {
+	private Pac(int xEntrada, int yEntrada) {
 		this.posicionX = xEntrada;
 		this.posicionY = yEntrada;
 
