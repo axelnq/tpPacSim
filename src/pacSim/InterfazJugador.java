@@ -19,7 +19,7 @@ public class InterfazJugador {
 		
 		Casillero casillero = unJuego.casilleroAMover(movimiento);
 		
-		System.out.println(casillero.getTipo());
+		System.out.println(casillero.mostrarCasillero());
 		
 		casillero.recibirMovimiento(unPac);
 		

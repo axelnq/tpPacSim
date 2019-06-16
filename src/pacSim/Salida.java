@@ -2,7 +2,7 @@ package pacSim;
 
 public class Salida extends Casillero {
 
-	private String tipo = "Salida";
+	private static final String VALOR = " S ";
 
 	@Override
 	public void recibirMovimiento(Pac unPac) {
@@ -18,10 +18,8 @@ public class Salida extends Casillero {
 	}
 	
 	@Override
-	public String getTipo() {
-
-		return tipo;
-
+	public String mostrarCasillero() {
+		return VALOR;
 	}
 
 }

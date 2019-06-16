@@ -1,8 +1,5 @@
 package pacSim;
 
-import java.util.ArrayList;
-import java.util.List;
-
 public class Normal extends Casillero {
 
 	public Mina mina;
@@ -64,9 +61,12 @@ public class Normal extends Casillero {
 	}
 
 	@Override
-	public String getTipo() {
-
-		if (hayMina && provision != null) {
+	public String mostrarCasillero() {
+		return "   ";
+	}
+	
+	/*
+	 * if (hayMina && provision != null) {
 			tipo = mina.getTipo() +"Y"+ provision.getTipo();
 		} else if (hayMina && provision == null) {
 			tipo = mina.getTipo();
@@ -77,7 +77,7 @@ public class Normal extends Casillero {
 		}
 
 		return tipo;
-
-	}
+	 * 
+	 */
 
 }

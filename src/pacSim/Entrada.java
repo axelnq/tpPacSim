@@ -1,27 +1,22 @@
 package pacSim;
 
 public class Entrada extends Casillero {
-	
-	public String tipo = "Entrada";
-	
+
+	private static final String VALOR = " E ";
 
 	@Override
 	public void recibirMovimiento(Pac unPac) {
 		System.out.println("Es la entrada ");
-		
 	}
 
 	@Override
 	public boolean puedoMover() {
-		// TODO Auto-generated method stub
 		return true;
 	}
-	
+
 	@Override
-	public String getTipo() {
-		
-		return tipo;
-		
+	public String mostrarCasillero() {
+		return VALOR;
 	}
 
 }

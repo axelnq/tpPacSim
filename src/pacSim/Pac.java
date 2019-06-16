@@ -64,7 +64,7 @@ public class Pac {
 		return posicionY;
 	}
 
-	public void moverArriba() {
+/*	public void moverArriba() {
 		this.posicionX = posicionX - 1;
 	}
 
@@ -79,7 +79,7 @@ public class Pac {
 	public void moverIzquierda() {
 		this.posicionY = posicionY - 1;
 	}
-
+*/
 	public static void resetPac() {
 		unPac = null;
 	}

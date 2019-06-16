@@ -2,16 +2,15 @@ package pacSim;
 
 public class PosicionJugador extends Casillero {
 
-	private String tipo = "Jugador";
+	private static final String VALOR = " J ";
 
 	public PosicionJugador() {
 
 	}
 
 	@Override
-	public String getTipo() {
-
-		return tipo;
+	public String mostrarCasillero() {
+		return VALOR;
 	}
 
 	@Override

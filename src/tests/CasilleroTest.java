@@ -4,7 +4,7 @@ import pacSim.*;
 
 public class CasilleroTest {
 
-	public static Pac unPac = new Pac(5, 6);
+	public static Pac unPac = Pac.getPac(5, 6);
 
 	public static void main(String[] args) {
 
@@ -272,7 +272,7 @@ public class CasilleroTest {
 				casilleros1[i][j] = n4;
 				
 				casilleros1[i][j].recibirMovimiento(unPac);
-			System.out.println(casilleros1[i][j].getTipo());
+			System.out.println(casilleros1[i][j].mostrarCasillero());
 			}
 		}
 	}
@@ -292,7 +292,7 @@ public class CasilleroTest {
 				casilleros1[i][j] = n4;
 				
 				casilleros1[i][j].recibirMovimiento(unPac);
-			System.out.println(casilleros1[i][j].getTipo());
+			System.out.println(casilleros1[i][j].mostrarCasillero());
 			}
 		}
 	}
@@ -312,7 +312,7 @@ public class CasilleroTest {
 				casilleros1[i][j] = n4;
 				
 				casilleros1[i][j].recibirMovimiento(unPac);
-			System.out.println(casilleros1[i][j].getTipo());
+			System.out.println(casilleros1[i][j].mostrarCasillero());
 			}
 		}
 	}

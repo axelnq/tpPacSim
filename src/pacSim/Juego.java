@@ -9,7 +9,6 @@ public class Juego {
 	public int posicionY = 0;
 
 	public Juego() {
-		unPac = new Pac(5, 6);
 
 		int mapaMinas[][] = { { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 1 }, { 0, 0, 0, 0, 0 },
 				{ 0, 0, 0, 1, 0 } };
@@ -93,6 +92,19 @@ public class Juego {
 	}
 
 	public void mostrarTablero() {
+		
+		Casillero[][] tableroCompleto = tablero.obtenerTablero();
+		
+		for (int i = 0; i < tableroCompleto.length; i++) {
+			for (int j = 0; j < tableroCompleto[i].length; j++) {
+				System.out.println(tableroCompleto[i][j]);
+			}
+		}
+		
+	}
+	
+	
+	/*public void mostrarTablero() {
 		String fila = " ";
 		for (int i = 0; i < this.tablero.obtenerTablero().length; i++) {
 			fila = " ";
@@ -100,27 +112,27 @@ public class Juego {
 
 			for (int j = 0; j < this.tablero.obtenerTablero()[i].length; j++) {
 
-				if (this.tablero.getCasillero(i, j).getTipo().equalsIgnoreCase("Jugador")) {
+				if (this.tablero.getCasillero(i, j).mostrarCasillero().equalsIgnoreCase("Jugador")) {
 					fila += "  J  ";
 				}
 
-				if (this.tablero.getCasillero(i, j).getTipo().equalsIgnoreCase("Entrada")) {
+				if (this.tablero.getCasillero(i, j).mostrarCasillero().equalsIgnoreCase("Entrada")) {
 					fila += "  E  ";
 				}
-				if (this.tablero.getCasillero(i, j).getTipo().equalsIgnoreCase("Mina")) {
+				if (this.tablero.getCasillero(i, j).mostrarCasillero().equalsIgnoreCase("Mina")) {
 					fila += "  M  ";
 				}
 
-				if (this.tablero.getCasillero(i, j).getTipo().equalsIgnoreCase("Pared")) {
+				if (this.tablero.getCasillero(i, j).mostrarCasillero().equalsIgnoreCase("Pared")) {
 					fila += "  X  ";
 				}
-				if (this.tablero.getCasillero(i, j).getTipo().equalsIgnoreCase("Salida")) {
+				if (this.tablero.getCasillero(i, j).mostrarCasillero().equalsIgnoreCase("Salida")) {
 					fila += "  S  ";
 				}
-				if (this.tablero.getCasillero(i, j).getTipo().equalsIgnoreCase("Provision")) {
+				if (this.tablero.getCasillero(i, j).mostrarCasillero().equalsIgnoreCase("Provision")) {
 					fila += "  P  ";
 				}
-				if (this.tablero.getCasillero(i, j).getTipo().equalsIgnoreCase("Vacio")) {
+				if (this.tablero.getCasillero(i, j).mostrarCasillero().equalsIgnoreCase("Vacio")) {
 					fila += "  L  ";
 				}
 
@@ -130,7 +142,7 @@ public class Juego {
 			System.out.println(fila);
 		}
 	}
-
+*/
 	
 
 }

@@ -40,7 +40,7 @@ public class TableroTest {
 		
 		tablero.setPosJugador(unPac.getPosicionX(), unPac.getPosicionY());
 		
-		mostrarTablero();
+		mostrarTablero2();
 		
 		casillero = casilleroAMover("Izquierda");
 		
@@ -52,7 +52,7 @@ public class TableroTest {
 		unPac.moverPac(posicionX, posicionY);
 		
 		
-		mostrarTablero();
+		mostrarTablero2();
 		
 		/// testeo de 1 movimiento 
 	}
@@ -66,27 +66,27 @@ public class TableroTest {
 
 			for (int j = 0; j < tablero.obtenerTablero()[i].length; j++) {
 
-				if (tablero.getCasillero(i, j).getTipo().equalsIgnoreCase("Jugador")) {
+				if (tablero.getCasillero(i, j).mostrarCasillero().equalsIgnoreCase("Jugador")) {
 					fila += "  J  ";
 				}
 
-				if (tablero.getCasillero(i, j).getTipo().equalsIgnoreCase("Entrada")) {
+				if (tablero.getCasillero(i, j).mostrarCasillero().equalsIgnoreCase("Entrada")) {
 					fila += "  E  ";
 				}
-				if (tablero.getCasillero(i, j).getTipo().equalsIgnoreCase("Mina")) {
+				if (tablero.getCasillero(i, j).mostrarCasillero().equalsIgnoreCase("Mina")) {
 					fila += "  M  ";
 				}
 
-				if (tablero.getCasillero(i, j).getTipo().equalsIgnoreCase("Pared")) {
+				if (tablero.getCasillero(i, j).mostrarCasillero().equalsIgnoreCase("Pared")) {
 					fila += "  X  ";
 				}
-				if (tablero.getCasillero(i, j).getTipo().equalsIgnoreCase("Salida")) {
+				if (tablero.getCasillero(i, j).mostrarCasillero().equalsIgnoreCase("Salida")) {
 					fila += "  S  ";
 				}
-				if (tablero.getCasillero(i, j).getTipo().equalsIgnoreCase("Escudo") || tablero.getCasillero(i, j).getTipo().equalsIgnoreCase("Vitamina") ) {
+				if (tablero.getCasillero(i, j).mostrarCasillero().equalsIgnoreCase("Escudo") || tablero.getCasillero(i, j).mostrarCasillero().equalsIgnoreCase("Vitamina") ) {
 					fila += "  P  ";
 				}
-				if (tablero.getCasillero(i, j).getTipo().equalsIgnoreCase("Vacio")) {
+				if (tablero.getCasillero(i, j).mostrarCasillero().equalsIgnoreCase("Vacio")) {
 					fila += "  L  ";
 				}
 
@@ -96,6 +96,25 @@ public class TableroTest {
 			System.out.println(fila);
 		}
 	}
+	
+	public static void mostrarTablero2() {
+		
+		Casillero[][] tableroCompleto = tablero.obtenerTablero();
+		
+		for (int i = 0; i < tableroCompleto.length; i++) {
+			
+			System.out.print("|");
+			
+			for (int j = 0; j < tableroCompleto[i].length; j++) {
+				System.out.print(tableroCompleto[i][j].mostrarCasillero());
+			}
+			
+			System.out.print("|");
+			System.out.println();
+		}
+		
+	}
+	
 	
 	
 	public static Casillero casilleroAMover(String movimiento) {

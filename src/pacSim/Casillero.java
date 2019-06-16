@@ -1,13 +1,8 @@
 package pacSim;
 
-import java.util.ArrayList;
-
 public abstract class Casillero {
 
-	public Casillero() {
-
-	}
-	public abstract String getTipo();
+	public abstract String mostrarCasillero();
 
 	public abstract void recibirMovimiento(Pac unPac);
 
