@@ -10,7 +10,8 @@ public class InterfazJugador {
 	public static String movimiento = "Arriba";
 
 	public static void main(String[] args) {
-
+		
+	
 		unJuego = new Juego();
 
 		unJuego.mostrarTablero();
@@ -22,24 +23,7 @@ public class InterfazJugador {
 		System.out.println(casillero.mostrarCasillero());
 		
 		casillero.recibirMovimiento(unPac);
-		
-		
 	
-		
-		
-		
-
-		/*if (casillero.puedoMover()) {
-
-			casillero.recibirMovimiento(unPac);
-			unJuego.actualizarPosicionJugador();
-
-		} else {
-			System.out.println("Casillero invalido");
-		}
-		
-		unJuego.mostrarTablero();*/
-
 	}
 
 	
