@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class InterfazJugador {
 
-	private static final int VALORINVALIDO = 10;
+	private static final int INCORRECTO = 10;
 
 	public static Juego unJuego;
 
@@ -42,7 +42,7 @@ public class InterfazJugador {
 				leido = sc.nextLine();
 				opc = Integer.parseInt(leido);
 			} catch (Exception e) {
-				opc = VALORINVALIDO;
+				opc = INCORRECTO;
 			}
 
 			switch (opc) {
