@@ -36,9 +36,12 @@ public class InterfazJugador {
 			System.out.println("4. Derecha");
 			System.out.print("Opcion ->");
 
-			leido = sc.nextLine();
-
-			opc = Integer.parseInt(leido);
+			try {
+				leido = sc.nextLine();
+				opc = Integer.parseInt(leido);
+			} catch (Exception e) {
+				opc = 10;
+			}
 
 			switch (opc) {
 
@@ -71,7 +74,7 @@ public class InterfazJugador {
 				unJuego.mostrarTablero();
 				break;
 			default:
-				System.out.println("Debes introducir SOLAMENTE números del 1 al 4");
+				System.out.println("Debes introducir SOLAMENTE nï¿½meros del 1 al 4");
 				break;
 			}
 		} while (opc != -1 && !unJuego.termino());
@@ -81,10 +84,10 @@ public class InterfazJugador {
 	private static void mover(Casillero casillero) {
 		if (casillero.puedoMover()) {
 			casillero.recibirMovimiento(unPac);
-			tablero.setPosJugador(unJuego.posicionX, unJuego.posicionY);
+			tablero.setPosJugador(casillero.getPosicionX(), casillero.getPosicionY());
 			tablero.setLibre(unPac.getPosicionX(), unPac.getPosicionY());
 
-			unPac.moverPac(unJuego.posicionX, unJuego.posicionY);
+			unPac.moverPac(casillero.getPosicionX(), casillero.getPosicionY());
 
 		} else {
 			casillero.recibirMovimiento(unPac);

@@ -5,8 +5,8 @@ public class Juego {
 	public Tablero tablero;
 	public Pac unPac;
 	public Casillero casillero;
-	public int posicionX = 0;
-	public int posicionY = 0;
+//	public int posicionX = 0;
+//	public int posicionY = 0;
 
 	public Juego() {
 		
@@ -42,43 +42,41 @@ public class Juego {
 		if (movimiento.equalsIgnoreCase("Arriba")) {
 
 			casillero = tablero.getCasillero(unPac.getPosicionX() - 1, unPac.getPosicionY());
-
-			posicionX = unPac.getPosicionX() - 1;
-			posicionY = unPac.getPosicionY();
+			casillero.setPosicionX(unPac.getPosicionX() - 1);
+			casillero.setPosicionY(unPac.getPosicionY());
 
 		}
 		if (movimiento.equalsIgnoreCase("Abajo")) {
 
 			casillero = tablero.getCasillero(unPac.getPosicionX() + 1, unPac.getPosicionY());
-			posicionX = unPac.getPosicionX() + 1;
-			posicionY = unPac.getPosicionY();
+			casillero.setPosicionX(unPac.getPosicionX() + 1);
+			casillero.setPosicionY(unPac.getPosicionY());
 
 		}
 
 		if (movimiento.equalsIgnoreCase("Izquierda")) {
 
 			casillero = tablero.getCasillero(unPac.getPosicionX(), unPac.getPosicionY() - 1);
-			posicionX = unPac.getPosicionX();
-			posicionY = unPac.getPosicionY() - 1;
-
+			casillero.setPosicionX(unPac.getPosicionX());
+			casillero.setPosicionY(unPac.getPosicionY() - 1);
 		}
 
 		if (movimiento.equalsIgnoreCase("Derecha")) {
 
 			casillero = tablero.getCasillero(unPac.getPosicionX(), unPac.getPosicionY() + 1);
-			posicionX = unPac.getPosicionX();
-			posicionY = unPac.getPosicionY() + 1;
+			casillero.setPosicionX(unPac.getPosicionX());
+			casillero.setPosicionY(unPac.getPosicionY() +1);
 
 		}
 		return casillero;
 	}
-
-	public void actualizarPosicionJugador() {
-		
-		this.tablero.setPosJugador(posicionX, posicionY); // al casillero al que nos vamos a mover lo ponemos en PosicionJugador
-		this.tablero.setLibre(unPac.getPosicionX(), unPac.getPosicionY()); // dejamos libre el casillero donde estaba el pac
-		unPac.moverPac(posicionX, posicionY);
-	}
+//
+//	public void actualizarPosicionJugador() {
+//		
+//		this.tablero.setPosJugador(posicionX, posicionY); // al casillero al que nos vamos a mover lo ponemos en PosicionJugador
+//		this.tablero.setLibre(unPac.getPosicionX(), unPac.getPosicionY()); // dejamos libre el casillero donde estaba el pac
+//		unPac.moverPac(posicionX, posicionY);
+//	}
 
 	public boolean termino() { // EL JUEGO DEJA DE FUNCIONAR SI OCURRE ALGUNA DE ESTAS DOS COSAS
 		if (unPac.getVida() == 0  ) {

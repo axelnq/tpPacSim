@@ -20,10 +20,10 @@ public class TableroTest {
 		
 		casillero.recibirMovimiento(unPac);
 		
-		tablero.setPosJugador(unJuego.posicionX, unJuego.posicionY);
+		tablero.setPosJugador(casillero.getPosicionX(), casillero.getPosicionY());
 		tablero.setLibre(unPac.getPosicionX(), unPac.getPosicionY());
 		
-		unPac.moverPac(unJuego.posicionX, unJuego.posicionY);
+		unPac.moverPac(casillero.getPosicionX(), casillero.getPosicionY());
 		
 		
 		unJuego.mostrarTablero();

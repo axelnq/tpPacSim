@@ -4,10 +4,6 @@ public class PosicionJugador extends Casillero {
 
 	private static final String VALOR = " J ";
 
-	public PosicionJugador() {
-
-	}
-
 	@Override
 	public String mostrarCasillero() {
 		return VALOR;
