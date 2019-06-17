@@ -17,7 +17,7 @@ public class Normal extends Casillero {
 	public void agregarElemento(String elemento) {
 
 		if (elemento.equalsIgnoreCase("Mina")) {
-			this.mina = new Mina();
+			this.mina = Mina.getMina();
 			hayMina = true;
 		}
 		if (elemento.equalsIgnoreCase("Escudo")) {

@@ -30,7 +30,7 @@ public class InterfazJugador {
 		menuMovimientos(sc);
 
 		unJuego.mostrarPuntuacion();
-		
+
 		resetPartida(sc);
 		sc.close();
 	}
@@ -61,8 +61,7 @@ public class InterfazJugador {
 				Casillero casillero = unJuego.casilleroAMover("Arriba");
 				if (unJuego.posicionValida && !casillero.esSalida()) {
 					mover(casillero);
-
-					unJuego.mostrarTablero();
+					
 				} else {
 					unJuego.gano();
 				}
@@ -74,7 +73,6 @@ public class InterfazJugador {
 
 					mover(casillero2);
 
-					unJuego.mostrarTablero();
 				} else {
 					unJuego.gano();
 				}
@@ -83,7 +81,7 @@ public class InterfazJugador {
 				Casillero casillero3 = unJuego.casilleroAMover("Izquierda");
 				if (unJuego.posicionValida && !casillero3.esSalida()) {
 					mover(casillero3);
-					unJuego.mostrarTablero();
+
 				} else {
 					unJuego.gano();
 				}
@@ -93,7 +91,7 @@ public class InterfazJugador {
 				Casillero casillero4 = unJuego.casilleroAMover("Derecha");
 				if (unJuego.posicionValida && !casillero4.esSalida()) {
 					mover(casillero4);
-					unJuego.mostrarTablero();
+
 				} else {
 					unJuego.gano();
 				}
@@ -113,30 +111,32 @@ public class InterfazJugador {
 			tablero.setLibre(unPac.getPosicionX(), unPac.getPosicionY());
 
 			unPac.moverPac(casillero.getPosicionX(), casillero.getPosicionY());
+			unJuego.mostrarTablero();
 
 		} else {
 			casillero.recibirMovimiento(unPac);
+			unJuego.mostrarTablero();
 		}
 	}
-	
-	private static void resetPartida(Scanner sc){
+
+	private static void resetPartida(Scanner sc) {
 
 		System.out.println("¿Jugar otra vez? (si/no)");
-		
+
 		String decision;
 		decision = sc.next();
-		
-		while(!decision.equalsIgnoreCase("si") && !decision.equalsIgnoreCase("no")){
+
+		while (!decision.equalsIgnoreCase("si") && !decision.equalsIgnoreCase("no")) {
 			System.out.println("Comando invalido, debe ingresarse si o no");
 			decision = sc.nextLine();
 		}
-		if(decision.equalsIgnoreCase("si")){
+		if (decision.equalsIgnoreCase("si")) {
 			resetearInterfaz();
 		}
-		
+
 	}
-	
-	private static void resetearInterfaz(){
+
+	private static void resetearInterfaz() {
 		unJuego.resetearJuego();
 		iniciarJuego();
 	}

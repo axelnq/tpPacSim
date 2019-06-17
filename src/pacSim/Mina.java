@@ -1,6 +1,9 @@
 package pacSim;
 
 public class Mina {
+	
+	
+	private static Mina mina;
 
 	private int danio = 1;
 	
@@ -10,6 +13,12 @@ public class Mina {
 
 	public Mina() {
 		
+	}
+	public static Mina getMina() {
+		if (mina == null) {
+			mina = new Mina();
+		}
+		return mina;
 	}
 
 	public void efecto(Pac unPac) {

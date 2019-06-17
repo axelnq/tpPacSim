@@ -14,7 +14,7 @@ public class TableroTest {
 		
 		
 		
-		unJuego.mostrarTablero(); // 
+		unJuego.mostrarTablero(); 
 		
 		Casillero casillero = unJuego.casilleroAMover("Izquierda");
 		
