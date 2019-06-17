@@ -1,8 +1,8 @@
 package tests;
 
 import org.junit.Assert;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
+import org.junit.Before;
+import org.junit.Test;
 
 import pacSim.Normal;
 import pacSim.Pac;
@@ -15,7 +15,7 @@ class CasillerosTest {
 	private Normal n3;
 	private Normal n4;
 
-	@BeforeEach
+	@Before
 	public void prepararTests() {
 		unPac = Pac.getPac(5, 6);
 		n1 = new Normal();
