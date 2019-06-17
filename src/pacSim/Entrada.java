@@ -19,4 +19,9 @@ public class Entrada extends Casillero {
 		return VALOR;
 	}
 
+	@Override
+	public void agregarElemento(String elemento) {
+		
+	}
+
 }

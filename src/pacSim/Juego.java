@@ -11,7 +11,7 @@ public class Juego {
 	public Juego() {
 		
 		int mapaMinas[][] = { { 0, 1, 1, 1, 1 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 1 }, { 0, 0, 0, 0, 0 },
-				{ 0, 0, 0, 0, 0 } };
+				{ 0, 0, 0, 1, 0 } };
 
 		int mapaPared[][] = { { 0, 0, 0, 0, 0 }, { 1, 1, 1, 0, 0 }, { 0, 0, 0, 0, 0 }, { 0, 0, 0, 0, 1},
 				{ 0, 0, 0, 0, 0 } };
@@ -31,6 +31,8 @@ public class Juego {
 		tablero = Tablero.getTablero(alto, ancho, mapaMinas, mapaProvision, mapaPared, xEntrada, yEntrada, xSalida,
 				ySalida);
 		unPac = Pac.getPac(xEntrada, yEntrada);
+		tablero.setPosJugador(unPac.getPosicionX(), unPac.getPosicionY());
+		
 
 		
 	}

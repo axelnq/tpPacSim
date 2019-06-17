@@ -12,7 +12,7 @@ public class TableroTest {
 		Pac unPac = unJuego.unPac;
 		Tablero tablero = unJuego.tablero;
 		
-		tablero.setPosJugador(unPac.getPosicionX(), unPac.getPosicionY());
+		
 		
 		unJuego.mostrarTablero(); // 
 		

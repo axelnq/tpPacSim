@@ -24,4 +24,10 @@ public class Pared extends Casillero{
 		return VALOR;
 	}
 
+	@Override
+	public void agregarElemento(String elemento) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

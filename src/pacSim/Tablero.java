@@ -84,14 +84,14 @@ public class Tablero {
 		for (int i = 0; i < mapaMinas.length; i++) {
 			for (int j = 0; j < mapaMinas[i].length; j++) {
 				if (mapaMinas[i][j] == 1) {
-
-					Normal casillero = new Normal();
-
-					casillero.agregarElemento("Mina");
+					
+					
+					tableroPac[i][j].agregarElemento("Mina");
+					
+					
 					
 
-					this.tableroPac[i][j] = casillero;
-
+				
 				}
 			}
 		}
@@ -104,10 +104,7 @@ public class Tablero {
 			for (int j = 0; j < mapaProvisiones[i].length; j++) {
 				if (mapaProvisiones[i][j] == 1) {
 
-					Normal casillero = new Normal();
-					casillero.agregarElemento("Escudo");
-
-					this.tableroPac[i][j] = casillero;
+					tableroPac[i][j].agregarElemento("Escudo");
 				}
 			}
 		}
@@ -121,6 +118,7 @@ public class Tablero {
 				if (mapaPared[i][j] == 1) {
 
 					Pared pared = new Pared();
+					pared.agregarElemento("Mina");
 
 					this.tableroPac[i][j] = pared;
 				}

@@ -25,4 +25,10 @@ public class PosicionJugador extends Casillero {
 		return true;
 	}
 
+	@Override
+	public void agregarElemento(String elemento) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

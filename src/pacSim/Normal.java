@@ -64,7 +64,8 @@ public class Normal extends Casillero {
 	public String mostrarCasillero() {
 		return "   ";
 	}
-	
+
+
 
 
 }
