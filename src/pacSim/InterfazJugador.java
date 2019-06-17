@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class InterfazJugador {
 
+	private static final int VALORINVALIDO = 10;
+
 	public static Juego unJuego;
 
 	public static Pac unPac;
@@ -30,15 +32,18 @@ public class InterfazJugador {
 		int opc = 0;
 
 		do {
-			System.out.println("1. Arriba");
+			System.out.println("1. Arriba ");
 			System.out.println("2. Abajo");
 			System.out.println("3. Izquierda");
 			System.out.println("4. Derecha");
 			System.out.print("Opcion ->");
 
-			leido = sc.nextLine();
-
-			opc = Integer.parseInt(leido);
+			try {
+				leido = sc.nextLine();
+				opc = Integer.parseInt(leido);
+			} catch (Exception e) {
+				opc = VALORINVALIDO;
+			}
 
 			switch (opc) {
 
