@@ -7,7 +7,7 @@ public class Juego {
 	public Casillero casillero;
 	public boolean posicionValida = true;
 
-	public boolean gano = false;
+	private boolean gano = false;
 //	public int posicionX = 0;
 //	public int posicionY = 0;
 
@@ -75,13 +75,7 @@ public class Juego {
 		}
 		return casillero;
 	}
-//
-//	public void actualizarPosicionJugador() {
-//		
-//		this.tablero.setPosJugador(posicionX, posicionY); // al casillero al que nos vamos a mover lo ponemos en PosicionJugador
-//		this.tablero.setLibre(unPac.getPosicionX(), unPac.getPosicionY()); // dejamos libre el casillero donde estaba el pac
-//		unPac.moverPac(posicionX, posicionY);
-//	}
+
 
 	public boolean termino() {
 		if (unPac.getVida() == 0 || gano == true) {

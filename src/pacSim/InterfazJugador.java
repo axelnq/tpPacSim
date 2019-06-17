@@ -52,11 +52,11 @@ public class InterfazJugador {
 			case 1:
 
 				Casillero casillero = unJuego.casilleroAMover("Arriba");
-				if (unJuego.posicionValida&& !casillero.esSalida()) {
+				if (unJuego.posicionValida && !casillero.esSalida()) {
 					mover(casillero);
 
 					unJuego.mostrarTablero();
-				}else {
+				} else {
 					unJuego.gano();
 				}
 				break;
@@ -67,19 +67,17 @@ public class InterfazJugador {
 
 					mover(casillero2);
 
-					unJuego.gano();
-
 					unJuego.mostrarTablero();
-				}else {
+				} else {
 					unJuego.gano();
 				}
 				break;
 			case 3:
 				Casillero casillero3 = unJuego.casilleroAMover("Izquierda");
-				if (unJuego.posicionValida&& !casillero3.esSalida()) {
+				if (unJuego.posicionValida && !casillero3.esSalida()) {
 					mover(casillero3);
 					unJuego.mostrarTablero();
-				}else {
+				} else {
 					unJuego.gano();
 				}
 				break;
@@ -89,7 +87,7 @@ public class InterfazJugador {
 				if (unJuego.posicionValida && !casillero4.esSalida()) {
 					mover(casillero4);
 					unJuego.mostrarTablero();
-				}else {
+				} else {
 					unJuego.gano();
 				}
 				break;
