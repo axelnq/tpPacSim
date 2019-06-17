@@ -7,6 +7,8 @@ public abstract class Casillero {
 	
 	public abstract String mostrarCasillero();
 	
+	public abstract boolean esSalida();
+	
 	public abstract  void agregarElemento(String elemento);
 
 	public abstract void recibirMovimiento(Pac unPac);

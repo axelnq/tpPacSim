@@ -65,6 +65,12 @@ public class Normal extends Casillero {
 		return "   ";
 	}
 
+	@Override
+	public boolean esSalida() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 
 
 

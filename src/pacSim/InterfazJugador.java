@@ -24,6 +24,8 @@ public class InterfazJugador {
 
 		menuMovimientos(sc);
 
+		unJuego.mostrarPuntuacion();
+
 	}
 
 	public static void menuMovimientos(Scanner sc) {
@@ -50,30 +52,46 @@ public class InterfazJugador {
 			case 1:
 
 				Casillero casillero = unJuego.casilleroAMover("Arriba");
-				mover(casillero);
+				if (unJuego.posicionValida&& !casillero.esSalida()) {
+					mover(casillero);
 
-				unJuego.mostrarTablero();
-
+					unJuego.mostrarTablero();
+				}else {
+					unJuego.gano();
+				}
 				break;
 			case 2:
+
 				Casillero casillero2 = unJuego.casilleroAMover("Abajo");
-				mover(casillero2);
+				if (unJuego.posicionValida && !casillero2.esSalida()) {
 
-				unJuego.mostrarTablero();
+					mover(casillero2);
 
+					unJuego.gano();
+
+					unJuego.mostrarTablero();
+				}else {
+					unJuego.gano();
+				}
 				break;
 			case 3:
 				Casillero casillero3 = unJuego.casilleroAMover("Izquierda");
-				mover(casillero3);
-				unJuego.mostrarTablero();
-
+				if (unJuego.posicionValida&& !casillero3.esSalida()) {
+					mover(casillero3);
+					unJuego.mostrarTablero();
+				}else {
+					unJuego.gano();
+				}
 				break;
 
 			case 4:
 				Casillero casillero4 = unJuego.casilleroAMover("Derecha");
-				mover(casillero4);
-
-				unJuego.mostrarTablero();
+				if (unJuego.posicionValida && !casillero4.esSalida()) {
+					mover(casillero4);
+					unJuego.mostrarTablero();
+				}else {
+					unJuego.gano();
+				}
 				break;
 			default:
 				System.out.println("Debes introducir SOLAMENTE n�meros del 1 al 4");

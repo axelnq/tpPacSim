@@ -7,6 +7,8 @@ public class Salida extends Casillero {
 	@Override
 	public void recibirMovimiento(Pac unPac) {
 		
+		
+		
 		System.out.println("Encontraste la salida , GANASTE !!!");
 
 	}
@@ -26,6 +28,12 @@ public class Salida extends Casillero {
 	public void agregarElemento(String elemento) {
 		// TODO Auto-generated method stub
 		
+	}
+
+	@Override
+	public boolean esSalida() {
+		// TODO Auto-generated method stub
+		return true;
 	}
 
 }

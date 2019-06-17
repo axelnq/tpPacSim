@@ -24,4 +24,10 @@ public class Entrada extends Casillero {
 		
 	}
 
+	@Override
+	public boolean esSalida() {
+		// TODO Auto-generated method stub
+		return false;
+	}
+
 }
