@@ -65,19 +65,6 @@ public class Normal extends Casillero {
 		return "   ";
 	}
 	
-	/*
-	 * if (hayMina && provision != null) {
-			tipo = mina.getTipo() +"Y"+ provision.getTipo();
-		} else if (hayMina && provision == null) {
-			tipo = mina.getTipo();
-		} else if (!hayMina && provision != null) {
-			tipo = provision.getTipo();
-		} else {
-			tipo = "Vacio";
-		}
 
-		return tipo;
-	 * 
-	 */
 
 }
