@@ -13,7 +13,12 @@ public class InterfazJugador {
 
 	public static void main(String[] args) {
 
-		unJuego = new Juego();
+		iniciarJuego();
+
+	}
+
+	private static void iniciarJuego() {
+		unJuego = Juego.getJuego();
 		Scanner sc = new Scanner(System.in);
 
 		unPac = unJuego.unPac;
@@ -25,7 +30,9 @@ public class InterfazJugador {
 		menuMovimientos(sc);
 
 		unJuego.mostrarPuntuacion();
-
+		
+		resetPartida(sc);
+		sc.close();
 	}
 
 	public static void menuMovimientos(Scanner sc) {
@@ -110,6 +117,28 @@ public class InterfazJugador {
 		} else {
 			casillero.recibirMovimiento(unPac);
 		}
+	}
+	
+	private static void resetPartida(Scanner sc){
+
+		System.out.println("¿Jugar otra vez? (si/no)");
+		
+		String decision;
+		decision = sc.next();
+		
+		while(!decision.equalsIgnoreCase("si") && !decision.equalsIgnoreCase("no")){
+			System.out.println("Comando invalido, debe ingresarse si o no");
+			decision = sc.nextLine();
+		}
+		if(decision.equalsIgnoreCase("si")){
+			resetearInterfaz();
+		}
+		
+	}
+	
+	private static void resetearInterfaz(){
+		unJuego.resetearJuego();
+		iniciarJuego();
 	}
 
 }

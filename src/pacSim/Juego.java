@@ -1,7 +1,8 @@
 package pacSim;
 
-public class Juego {
 
+public class Juego {
+	private static Juego unJuego;
 	public Tablero tablero;
 	public Pac unPac;
 	public Casillero casillero;
@@ -36,6 +37,13 @@ public class Juego {
 		unPac = Pac.getPac(xEntrada, yEntrada);
 		tablero.setPosJugador(unPac.getPosicionX(), unPac.getPosicionY());
 
+	}
+
+	public static Juego getJuego() {
+		if (unJuego == null) {
+			unJuego = new Juego();
+		}
+		return unJuego;
 	}
 
 	public Casillero casilleroAMover(String movimiento) {
@@ -75,7 +83,6 @@ public class Juego {
 		}
 		return casillero;
 	}
-
 
 	public boolean termino() {
 		if (unPac.getVida() == 0 || gano == true) {
@@ -137,6 +144,14 @@ public class Juego {
 		return posicionValida;
 
 	}
+	
+	
+	public void resetearJuego(){
+		unJuego = null;
+		Tablero.resetTablero();
+		Pac.resetPac();
+	}
+
 
 	/*
 	 * public void mostrarTablero() { String fila = " "; for (int i = 0; i <
